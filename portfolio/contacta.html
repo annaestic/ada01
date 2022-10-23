@@ -9,13 +9,14 @@
     <link rel="stylesheet" type="text/css" href="css/stylenew.css">
     <link rel="stylesheet" type="text/css" href="css/peu.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://kit.fontawesome.com/7ac73c8bbe.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- per la opcio de menu responsive -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="index.js"></script>
 </head>
 
 
@@ -29,6 +30,22 @@
             } else {
                 x.className = "topnav";
             }
+        }
+
+        //Sending an email via forms  
+        function sendEmail() {
+            alert("Això es una prova de formulari. Envia'm un email a annaestic@gmail.com")
+           /*  Email.send({
+                Host: "smtp.gmail.com",
+                Username: "lamarcilla@gmail.com",
+                Password: "<email password>",
+                To: '<recipient’s email address>',
+                From: "<sender’s email address>",
+                Subject: "<email subject>",
+                Body: "<email body>",
+            }).then(
+                message => alert("mail sent successfully")
+            ); */
         }
     </script>
 
@@ -48,10 +65,9 @@
     </header>
 
     <!-- section: trajectoria -->
-    <section >
-        <form action="submeter-formulario.php" method="post">
+    <section>
 
-
+        <form action="mailto:annaestic@gmail.com?subject=Test" method="post" enctype="text/plain" name="contact">
             <p>
                 <label for="nombre" class="colocar_nombre">Nom
                     <span class="obligatorio">*</span>
@@ -96,7 +112,7 @@
                     placeholder="Deja aquí tu comentario..."></textarea>
             </p>
 
-            <button type="submit" name="enviar_formulario" id="enviar">
+            <button type="submit" name="enviar_formulario" id="enviar" onclick="sendEmail()">
                 <p>Enviar</p>
             </button>
 

@@ -231,7 +231,14 @@ h1.name {
 .lead {
 	font-size: 44px;
 	font-weight: 300;
-	margin-top: 60px;
+	margin-top: 20px;
+	line-height: 55px;
+}
+
+.curriculum {
+	font-size: 44px;
+	font-weight: 300;
+	margin-top: 20px;
 	line-height: 55px;
 }
 
